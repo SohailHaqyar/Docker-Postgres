@@ -1,0 +1,13 @@
+version: '3'
+services:
+  postgres-service:
+    image: postgres
+    container_name: postgres-container
+    environment:
+      POSTGRES_USER: book_keeper 
+      POSTGRES_PASSWORD: book_keeper
+      POSTGRES_DB: book_keeper 
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./data/postgres:/var/lib/postgresql/data
